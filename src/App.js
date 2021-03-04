@@ -1,10 +1,34 @@
 import "./App.css";
 import Header from "./components/Header/Header";
+import Shop from "./components/Shop/Shop";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
+import OrderReview from "./components/OrderReview/OrderReview";
+import Manage from "./components/ManageInventory/Manage";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/shop">
+            <Shop />
+          </Route>
+          <Route path="/review">
+            <OrderReview />
+          </Route>
+          <Route path="/manage">
+            <Manage />
+          </Route>
+          <Route exact path="/">
+            <Shop />
+          </Route>
+          <Route path="*">
+            <ErrorPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

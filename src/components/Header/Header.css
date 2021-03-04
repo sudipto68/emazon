@@ -7,14 +7,14 @@
 .header nav{
     background-color: black;
     line-height:40px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
-.header nav a{
+.link{
     text-decoration: none;
     padding: 10px;
     margin: 10px;
     color: white;
 }
-.header nav a:hover{
+.link:hover{
     background-color: lightgray;
 }
