@@ -6,3 +6,9 @@
     margin-left: 20px;
     margin-right: 10px;
     border-right: 1px solid lightgray;}
+
+    @media only screen and (min-width:270px) and (max-width:576px){
+        .shop-container{
+            flex-direction: column;
+        }
+    }

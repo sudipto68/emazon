@@ -22,7 +22,7 @@ function App() {
           <Route path="/manage">
             <Manage />
           </Route>
-          <Route to="/product/:productkey">
+          <Route path="/product/:productkey">
             <ProductDetail />
           </Route>
           <Route exact path="/">

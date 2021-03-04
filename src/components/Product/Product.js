@@ -19,7 +19,11 @@ const Product = (props) => {
         <p>by: {seller}</p>
         <h5>${price}</h5>
         <p>Only {stock} left in stock - order soon</p>
-        <button onClick={() => addProducts(props.product)}>Add To Cart</button>
+        {props.showAddToCart && (
+          <button onClick={() => addProducts(props.product)}>
+            Add To Cart
+          </button>
+        )}
       </div>
     </div>
   );
