@@ -11,6 +11,10 @@
 .productDetails{
     margin-left:10px;
 }
+.productNameLink{
+    text-decoration: none;
+
+}
 button{
     background-color:goldenrod;
     border: none;
