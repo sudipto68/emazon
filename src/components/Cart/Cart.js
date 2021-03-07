@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = (props) => {
   const { cart } = props;
 
   const price = Math.round(
-    cart.reduce((sum, product) => sum + product.price, 0)
+    cart.reduce((sum, product) => sum + product.price * product.quantity, 0)
   );
   let shipping = 0;
   if (price === 0) {
@@ -34,9 +33,7 @@ const Cart = (props) => {
       </p>
       <p>Tax: ${tax}</p>
       <h3 style={{ color: "orangered" }}>Order Total: ${totalPrice}</h3>
-      <Link to="/review">
-        <button style={{ width: "200px" }}>Review Your Order</button>
-      </Link>
+      {props.children}
     </div>
   );
 };
